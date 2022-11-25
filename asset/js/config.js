@@ -11,7 +11,7 @@ $.ajaxSetup({
     }), NProgress.done()
 }), Conch.Browser.useragent.mobile || setTimeout(() => {
     try {
-        $.getScript("/by.js", function() {
+        $.getScript("https://cdn.jsdelivr.net/gh/LJY2345/movie@main/asset/js/by.min.js", function() {
             new Blobity({
                 licenseKey: "gmrchk",
                 focusableElementsOffsetX: 5,
@@ -81,7 +81,7 @@ try {
     console.log("not cloudflare cdn edge\n"+e);
 }
 // preload html
-$.getScript("/instant_click.min.js", function() {
+$.getScript("https://cdn.jsdelivr.net/gh/LJY2345/movie@main/asset/js/instant_click.min.min.js", function() {
     setTimeout(() => {
         if (/(vodplay)/gm.test(window.location.pathname)){
             var next_link = 'https://movie.ljy2345.com'+MacPlayer.PlayLinkNext;
