@@ -36,7 +36,7 @@ d+"px").css("background-color",a.isDark(e,i)?h.foreground:h.background).appendTo
 // change color
 var $cookie_color=$.cookie("color");
 if($cookie_color!=null){
-    $("link[name='color']").attr("href","../css/"+$cookie_color+".css?v="+conchtpl.ver+"");
+    $("link[name='color']").attr("href","https://cdn.jsdelivr.net/gh/LJY2345/movie@main/asset/css/"+$cookie_color+".min.css?v="+conchtpl.ver+"");
 }
 // 防止 jQuery.getScript 添加 ?_=timestamp
 $.ajaxSetup({ cache: true });
@@ -130,7 +130,7 @@ var Conch = {
 	},
 	'Swiper': {
         'Init': function() {
-            $.getScript("../js/set/swiper.min.js", function() {
+            $.getScript("https://cdn.jsdelivr.net/gh/LJY2345/movie@main/asset/js/set/swiper.min.js", function() {
                 Conch.Swiper.Scrolls();
                 Conch.Swiper.Navs();
                 Conch.Swiper.Banners();
@@ -562,7 +562,7 @@ var Conch = {
             })();
         },
         'Suggest':function($obj,$mid){
-            $.getScript("../js/set/autocomplete.js",function(){
+            $.getScript("https://cdn.jsdelivr.net/gh/LJY2345/movie@main/asset/js/set/autocomplete.min.js",function(){
             var SearchWidth = $('.hl-search-text').innerWidth();
             try {
                 $($obj).autocomplete(maccms.path + '/index.php/ajax/suggest?mid=' + $mid, {
@@ -997,7 +997,7 @@ var Conch = {
             }
 			$(".hl-color-item a").click(function(){
                 var $Color = $(this).attr("id");
-                $("link[name='color']").attr("href","../css/"+$Color+".css?v="+conchtpl.ver+"");  
+                $("link[name='color']").attr("href","https://cdn.jsdelivr.net/gh/LJY2345/movie@main/asset/css/"+$Color+".min.css?v="+conchtpl.ver+"");  
                 $.cookie("color",$Color,{expires:365, path: '/'});
                 if($Color=='black'){
                     document.querySelector('meta[name="theme-color"]').setAttribute("content", "#151515");
